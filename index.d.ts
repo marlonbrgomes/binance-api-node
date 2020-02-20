@@ -216,6 +216,7 @@ declare module 'binance-api-node' {
       startTime?: number
       endTime?: number
     }): Promise<DepositHistoryResponse>
+    getConfig(): Promise<any>
   }
 
   export interface HttpError extends Error {

@@ -292,6 +292,8 @@ export default opts => {
     keepDataStream: payload => privCall('/api/v1/userDataStream', payload, 'PUT', false, true),
     closeDataStream: payload => privCall('/api/v1/userDataStream', payload, 'DELETE', false, true),
 
+    getConfig: () => privCall('/sapi/v1/capital/config/getall', null, 'GET'),
+
     marginGetDataStream: () => privCall('/sapi/v1/userDataStream', null, 'POST', true),
     marginKeepDataStream: payload =>
       privCall('/sapi/v1/userDataStream', payload, 'PUT', false, true),
